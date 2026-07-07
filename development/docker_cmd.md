@@ -1,4 +1,4 @@
-# Most important💡 Docker operations
+# Most important Docker operations
 
 **[Docker Cheat Sheet](https://www.geeksforgeeks.org/docker-cheat-sheet/)**
 
@@ -62,8 +62,9 @@ docker exec -it <container_name> bash
 Docker Compose (similar to launch files in ROS)
 -----------------------------------------------
 
-1️⃣ **Specify a [docker compose](https://docs.docker.com/compose/) file** 
-**Note💡:** The extension has to be .yml e.g. docker-compose.yml
+1️⃣ **Specify a [docker compose](https://docs.docker.com/compose/) file**
+
+**💡Note:** The extension has to be .yml e.g. docker-compose.yml
 
 ```bash
 version: "<version>"   // Prefer to use the latest version found on the docker page.
@@ -133,4 +134,4 @@ docker run -v <custom_name>:<host_directory_path>
 ----------
 [Dockerfile](https://docs.docker.com/engine/reference/builder/)
 ----------
-1️⃣ Create a file named Dockerfile (Note💡: in VS Code the dockerfile gets automatically identified)
+1️⃣ Create a file named Dockerfile (💡Note: in VS Code the dockerfile gets automatically identified)
