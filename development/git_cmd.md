@@ -182,7 +182,7 @@ git branch -m master default # from master to default
 git push origin --delete master (deletes the remote master branch)
 ```
 
-**1️⃣9️⃣ Delete a local branch **
+**1️⃣9️⃣ Delete a local branch**
 ```bash
 git branch --delete <branchname> or git branch -D <branchname> # if not merged before
 ```
