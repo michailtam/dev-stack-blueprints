@@ -221,7 +221,7 @@ git push origin <old_name> <new_name>
 There are two ways to achieve this, one is by using [svn](https://stackoverflow.com/questions/7106012/download-a-single-folder-or-directory-from-a-github-repo) (easier way) and the other via [git](https://stackoverflow.com/questions/18900774/equivalent-of-svn-checkout-for-git):
 
 **2️⃣5️⃣ Delete the [whole commit history](https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github) - tested on GitHub**
-**Note💡:**Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is safer to do it as in the following:
+**Note💡:** Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is safer to do it as in the following:
 
 ```bash
 git checkout --orphan latest_branch
@@ -230,9 +230,8 @@ git commit -am "commit message"
 git branch -D main 		# delete the branch
 git branch -m main		# rename the current branch to main or master
 git push -f origin main	# force updating the repository:
-
-**Note💡:** This will not keep your old commit history around
 ```
+**Note💡:** This will not keep your old commit history around
 
 **2️⃣6️⃣ Copy the content of a branch to another one**
 ```bash
