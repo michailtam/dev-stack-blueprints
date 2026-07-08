@@ -26,6 +26,9 @@ git config --global user.name "Username of github or bitbucket"
 git config --global user.email "Email of github or bitbucket"
 git config --list
 # Note: The above data is contained in .gitconfig which is located in the home directory. Those, can be displayed in the terminal:
+
+# Now set the url for the GitHub repository
+git remote set-url origin <url-of-github-repository>
 ```
 
 **3️⃣ Clone the remote git repo**
@@ -51,7 +54,7 @@ git add <file> <file> ... or git add .
 
 **6️⃣ Commit the local files to the remote repository** 
 ```bash
-git commit -m "<commit message>"
+git commit -m "<commit-message>"
 ```
 
 ```bash
@@ -64,15 +67,15 @@ git push -u origin master
 **1️⃣ Pull a specific commit from the repo**
 ```bash
 git log 
-git log-remote <path to url> # list the last commit
+git log-remote <url-of-github-repository> # list the last commit
 git fetch origin <SHA-1> # copy the desired hash SHA-1 string from the list
 git checkout FETCH_HEAD
 ```
 
 **2️⃣ Pull a specific commit from a local remote branch**
 ```bash
-git clone <remote url> -b <branch name>
-cd <repo name>
+git clone <url-of-github-repository> -b <branch name>
+cd <repository-name>
 git checkout <COMMIT HASH e.g. f7255cf2cc6b5116e50840816d70d21e7cc039bb>
 **Note:** avoid using reset
 ```
@@ -113,16 +116,16 @@ git clean -fd # `-f` is `force`, `-d` is `remove directories`
 
 **8️⃣ Push an existing local repo to the remote repo**
 ```bash
-git remote add origin <url-repository.git>
+git remote add origin <url-of-github-repository>
 git push -u origin master
 # Example:
-git remote add origin <url-repository.git>
+git remote add origin <url-of-github-repository>
 git push -u origin master
 ```
 
-**9️⃣ Update a remote url: git remote set-url origin <new remote url>**
+**9️⃣ Update a remote url: git remote set-url origin <new-url-of-github-repository>**
 ```bash
-git remote set-url origin <url-repository.git>
+git remote set-url origin <url-of-github-repository>
 ```
 
 **1️⃣0️⃣ Get help: git help operation**
@@ -133,7 +136,7 @@ git help ignore
 **1️⃣1️⃣ Undo added file**
 ```bash
 git reset # or for specific files
-git reset <file_name>
+git reset <file-name>
 ```
 
 **1️⃣2️⃣ Fixes a detached head**
@@ -160,11 +163,11 @@ git checkout master # master is the new branch
 
 **1️⃣5️⃣ Duplicate a remote repository**
 ```bash
-git clone --bare <old-url-repository.git>
+git clone --bare <old-url-of-github-repository>
 cd old-repository.git
-git push --mirror <new-url-repository.git>
+git push --mirror <new-url-of-github-repository>
 cd ..
-rm -rf <old-url-repository.git>
+rm -rf <old-url-of-github-repository>
 ```
 
 **1️⃣6️⃣ Show information about a remote repository**
@@ -184,12 +187,12 @@ git push origin --delete master (deletes the remote master branch)
 
 **1️⃣9️⃣ Delete a local branch**
 ```bash
-git branch --delete <branchname> or git branch -D <branchname> # if not merged before
+git branch --delete <branch-name> or git branch -D <branch-name> # if not merged before
 ```
 
 **2️⃣0️⃣ Clone from a specific branch**
 ```bash
-git clone -b <branch-name> <url-repository.git>
+git clone -b <branch-name> <url-of-github-repository>
 ```
 
 **2️⃣1️⃣ Fix the “modified content, untracked content”**
@@ -210,10 +213,10 @@ Based on [this](https://stackoverflow.com/questions/24167676/cant-stage-folder-f
 ```bash
 # Switch to the master branch
 git branch master/main
-git branch -m <old_name> <new_name>
+git branch -m <old-name> <new-name>
 git branch -a 	# show the new local branch name
 # Note: Change the remote name also:
-git push origin <old_name> <new_name>
+git push origin <old-name> <new-name>
 # Now do a refresh on the remote site. The new branch name should appear.
 ```
 
@@ -235,7 +238,7 @@ git push -f origin main	# force updating the repository:
 
 **2️⃣6️⃣ Copy the content of a branch to another one**
 ```bash
-git checkout -b <branch_to> <branch_from>
+git checkout -b <branch-to> <branch-from>
 ```
 
 **2️⃣7️⃣ Fixing GitHub folders that have a [white arrow](https://stackoverflow.com/questions/62056294/github-folders-have-a-white-arrow-on-them) on them**
